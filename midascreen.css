@@ -1,0 +1,157 @@
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .Table, .menu, .food {
+        flex-direction: column;
+        gap: 10px;
+        margin: 4%;
+    }
+
+    .border1, .border2, .border3, .bord, .bordr, .border, .one, .tow, .three {
+        width: 90%;
+        height: auto;
+    }
+
+    .border1 img, .border2 img, .border3 img, .bord img, .bordr img, .border img, .one img, .tow img, .three img {
+        width: 80%;
+        height: auto;
+        left: 10%;
+    }
+
+    .next img, .prev img {
+        width: 40px;
+        height: 40px;
+        margin-top: 5%;
+    }
+
+    .next img {
+        margin-left: 60%;
+    }
+
+    .prev img {
+        margin-left: -10%;
+    }
+
+    .Table button, .menu button, .food button {
+        width: 80%;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    .next pre {
+        font-size: large;
+    }
+
+    .next pre p {
+        font-size: medium;
+    }
+    #messageInput{
+        margin-top: none;
+    }
+    #messageInput1{
+        margin-top: 2%;
+        margin-right: 4%;
+    }
+    #massageNumber{
+        margin-top: 2%;
+        margin-left: 1%;
+    }
+    #massage{
+        margin-top: 2%;
+        margin-right: 5%;
+    }
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .Table, .menu, .food {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin: 6%;
+    }
+
+    .border1, .border2, .border3, .bord, .bordr, .border, .one, .tow, .three {
+        width: 45%;
+        height: auto;
+    }
+
+    .border1 img, .border2 img, .border3 img, .bord img, .bordr img, .border img, .one img, .tow img, .three img {
+        width: 75%;
+        height: auto;
+        left: 12.5%;
+    }
+
+    .next img, .prev img {
+        width: 50px;
+        height: 50px;
+        margin-top: 5%;
+    }
+
+    .next img {
+        margin-left: 65%;
+    }
+
+    .prev img {
+        margin-left: -12%;
+    }
+
+    .Table button, .menu button, .food button {
+        width: 60%;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 45px;
+    }
+
+    .next pre {
+        font-size: x-large;
+    }
+
+    .next pre p {
+        font-size: large;
+    }
+}
+
+/* إعلامات إعلامية للشاشات بين 901px و 1200px */
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+    .Table {
+    width: 130%;
+   }
+    .border2 img {
+    width: 130%;
+   }
+   @keyframes slide-left {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
+    }
+
+ 
+}
+@media screen and (min-width: 901px) and (max-width: 1200px){
+    .border2 , body  {
+        width: 150%;
+    }
+
+}
+#messageInput{
+    margin-top: none;
+}
+#messageInput1{
+    margin-top: 2%;
+    margin-right: 4%;
+}
+#massageNumber{
+    margin-top: 2%;
+    margin-left: 1%;
+}
+#massage{
+    margin-top: 2%;
+    margin-right: 5%;
+}

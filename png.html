@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="photo.css">
+    <script src='photo.js'></script>
+    <script src="js.js"> </script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css.css" >
+    <link rel="stylesheet" text="text/css" href="midascreen.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    
+   
+    <style>
+       body {
+            margin-top: 5%;
+            height: 90em;
+        }
+        .Table, .menu, .food { 
+            display: flex;
+            gap: 20px;
+            margin: 8%;
+            top: -9%;
+        } 
+        .border1, .border2, .border3, .bord, .bordr, .border, .one, .tow, .three {
+            position: relative;
+            border: 2px black solid;
+            width: 350px;
+            height: 250px;
+            background-color: #FFD700;
+        }
+        .border1 img, .border2 img, .border3 img, .bord img, .bordr img, .border img, .one img, .tow img, .three img {
+           position: absolute;
+            top: 5%;
+            left: 15%;
+            width: 250px;
+            height: 100px;
+            transition: opacity 0.5s ease;
+        }
+        .front-image {
+            opacity: 0;
+        }
+        .next img, .prev img {
+            width: 55px;
+            height: 50px;
+            margin-top: 10%;
+            cursor: pointer;
+        }
+        .next img {
+            margin-left: 70%;
+        }
+        .prev img {
+            margin-left: -13%;
+        }
+        .Table button, .menu button, .food button {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            border: 5px white solid;
+            padding: 5px 10px;
+        }
+        .Table button:hover, .menu button:hover, .food button:hover {
+            box-shadow: 2px 2px 2px orange;
+        }
+        h2 {
+            text-align: center;
+            font-family: "Dancing Script", cursive;
+            text-shadow: 2px 2px 2px yellow;
+            font-size: 55px;
+        }
+        .next1 img {
+            margin-left: 70%;
+            width: 55px;
+            height: 50px;
+            margin-top: 15%;
+            cursor: pointer;
+        }
+        .prev2 img{
+            width: 55px;
+            height: 50px;
+            margin-top: 15%;
+            cursor: pointer;
+            margin-left: -13%;
+
+        }
+        .next pre {
+            margin-left: 20%;
+            margin-top: 35%;
+            font-size: xx-large;
+        }
+        .next pre p {
+            margin-top: -10.5%;
+            margin-left: 45%;
+            color: red;
+        }
+        .next #total {
+            margin-top: -10%;
+        }
+        #price {
+            margin-top: -6%;
+        }
+        #Fish{
+            margin-left: 10%;
+        }
+        #fish1{
+            margin-top: -5%;
+        }
+        
+       
+      
+       
+    </style>
+</head>
+
+<body>
+    <div class="loader">
+        <span class="loader__element"></span>
+        <span class="loader__element"></span>
+        <span class="loader__element"></span>
+      </div>
+    <h2>Menu</h2> <!-- tittle menu -->
+    <div class="Table"> <!--this div It contains border and image and button-->
+        <div class="border1"> 
+            <img class="back-image" src="sea food/pexels-kpaukshtite-1998920.jpg" alt='error'> <!--image boerder menu -->
+            <img class="front-image" src="sea food/pexels-catscoming-699544.jpg" alt="error"><!--image boerder menu -->
+            <button onclick="function1()" id="Mybutton">Buy</button><!--click button javascrpit bay -->
+            <div class="next"> <!--this div it contains image next and prev onclick javascrpit -->
+                <img src="next.png" onclick="toggleImage('next')"> 
+                <pre> name  :  <p>chrim</p></pre> <br>
+                <pre id="total"> price : <p> 20$</p></pre>
+            </div>
+            <div class="prev">
+                <img src="arrow.png" onclick="toggleImage('prev')">
+            </div>
+        </div>
+
+        <div class="border2">
+            <img class="next-imag" src="sea food/pexels-bestasya-9618223.jpg" alt="error"><!--image boerder menu -->
+            <img  class="back-img" src="sea food/pexels-cup-of-couple-8472621.jpg" alt="error"><!--image boerder menu -->
+            <button onclick="function1()"  id="Mybutton">Buy</button><!--click button javascrpit bay -->
+            <div class="next"> <!--this div it contains image next and prev onclick javascrpit -->
+                <img src="next.png" onclick="Click('next1')">
+                <pre id="name"> name  : <p> suoshi </p></pre>
+                <pre id="price"> price : <p>60$</p></pre>
+            </div> 
+            <div class="prev"> <!--this div it contains image next and prev onclick javascrpit -->
+                <img src="arrow.png" onclick="Click('prev2')">
+            </div>
+        </div>
+        <div class="border3">
+            <img  class="next-1" src="sea food/pexels-valeriya-1516415.jpg" alt="error">
+            <img class="prev-2" src="sea food/pexels-sebastian-coman-photography-1598188-3655916.jpg" alt="error">
+            <div class="next">
+                <img src="next.png" onclick="Click1('next1')">
+                <pre id="Fish">  name  :  <p>grilled fish</p></pre>
+                <pre id="fish1">price : <p> 180$ </p></pre>
+            </div>
+            <div class="prev">
+                <img src="arrow.png" onclick="Click1('prev2')">
+            </div>
+            <button onclick="function1()"  id="Mybutton" >Buy</button>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="bord">
+            <img  class="ne" src="pizza/pexels-arthurbrognoli-3343626.jpg" alt="error">
+            <img class="pre" src="pizza/pexels-brettjordan-825661.jpg" alt="error">
+            <div class="next">
+                <img src="next.png" onclick="Click2('next1')">
+                <pre id="Fish">  name  :  <p>Tomato</p></pre>
+                <pre id="fish1">price : <p> 10$ </p></pre>
+            </div>
+            <div class="prev">
+                <img src="arrow.png" onclick="Click2('prev2')">
+            </div>
+            <button onclick="function1()"  id="Mybutton" >Buy</button>
+        </div>
+        <div class="bordr">
+            <img  class="nex" src="pizza/pexels-narda-yescas-724842-1566837.jpg" alt="error">
+            <img class="pr" src="pizza/pexels-seanm-166451.jpg" alt="error">
+            <div class="next">
+                <img src="next.png" onclick="Click3('next1')">
+                <pre id="Fish">  name  :  <p>sausage</p></pre>
+                <pre id="fish1">price : <p> 25$ </p></pre>
+            </div>
+            <div class="prev">
+                <img src="arrow.png" onclick="Click3('prev2')">
+            </div>
+            
+            <button onclick="function1()"  id="Mybutton" >Buy</button>
+        </div>
+        <div class="border">
+            <img  class="n" src="pizza/pexels-pixabay-315755.jpg" alt="error">
+            <img class="p" src="pizza/pexels-beqa-tefnadze-264627-803290.jpg" alt="error">
+            <div class="next">
+                <img src="next.png" onclick="Click4('next1')">
+                <pre id="Fish">  name : <p>cheese</p></pre>
+                <pre id="fish1">price : <p> 15$ </p></pre>
+            </div>
+            <div class="prev">
+                <img src="arrow.png" onclick="Click4('prev2')">
+            </div>
+            <button onclick="function1()"  id="Mybutton" >Buy</button>
+        </div>
+    </div>
+    <div class="food">
+        <div class="one">
+            <img  class="e" src="fast food/pexels-valeriya-1251198.jpg" alt="error">
+            <img class="r" src="fast food/pexels-jonathanborba-2983101.jpg" alt="error">
+            <div class="next">
+                <img src="next.png" onclick="Click5('next1')">
+                <pre id="Fish">  name : <p>brgar</p></pre>
+                <pre id="fish1">price : <p> 15$ </p></pre>
+            </div>
+            <div class="prev">
+                <img src="arrow.png" onclick="Click5('prev2')">
+            </div>
+            <button onclick="function1()"  id="Mybutton" >Buy</button>
+        </div>
+        <div class="tow">
+            <img  class="x" src="fast food/pexels-valeriya-1893556.jpg" alt="error">
+            <img class="v" src="fast food/pexels-polina-tankilevitch-4109234.jpg" alt="error">
+            <div class="next">
+                <img src="next.png" onclick="Click6('next1')">
+                <pre id="Fish">  name : <p>potato</p></pre>
+                <pre id="fish1">price : <p> 10$ </p></pre>
+            </div>
+            <div class="prev">
+                <img src="arrow.png" onclick="Click6('prev2')">
+            </div>
+            <button onclick="function1()"  id="Mybutton" >Buy</button>
+        </div>
+        <div class="three">
+            <img  class="t" src="fast food/pexels-jonathanborba-2983101.jpg" alt="error">
+            <img class="s" src="fast food/pexels-rajesh-tp-749235-1633526.jpg" alt="error">
+            <div class="next">
+                <img src="next.png" onclick="Click7('next1')">
+                <pre id="Fish">  name : <p>cheken </p></pre>
+                <pre id="fish1">price : <p> 25$ </p></pre>
+            </div>
+            <div class="prev">
+                <img src="arrow.png" onclick="Click7('prev2')">
+            </div>
+            
+            <button onclick="function1()"  id="Mybutton" >Buy</button>
+        </div>
+    </div> 
+  
+        
+    </div>
+    <script> 
+    
+    const d = new Date();
+        function function1() { //* this code send massge whatsapp I'll show you how it works ط *//
+            Swal.fire({ // swal.fire 1- title she title swal.fire 2- html and input which puts in information//
+                title: 'Data Order',
+                html: '<input type="text" id="messageInput" placeholder="Name order"> <br>' + 
+                      '<input type="text" id="messageInput1" placeholder="Number Table or address" style="margin-left: 5%;"> <br>' +
+                      '<input type="text" id="massageNumber" placeholder="Phone number "> <br> ' + 
+                      '<input type="text" id="massage" placeholder="How much do you order?" style="margin-left:5%; margin-top:5%;" >  ' + 
+                      '<p id="date"> </P> ',
+                showCancelButton: true, // on show button//
+                confirmButtonText: 'Send', // change name button //
+                cancelButtonText: 'Cancel', //change name button//
+            }).then((result) => { // 
+                if (result.isConfirmed) { 
+                    var time = document.getElementById("date").value = d ;
+                    var phone = document.getElementById("massageNumber").value; // استدعاء id form html swa.fire //
+                    var order = document.getElementById("massage").value;// استدعاء id form html swa.fire //
+                    var message = document.getElementById("messageInput").value;// استدعاء id form html swa.fire //
+                    var address = document.getElementById("messageInput1").value;// استدعاء id form html swa.fire //
+                    var data =  "Time :"+ time +"\n"+"Name Food: " + message + "\n"+ "Order Number: " + order + "\n" + "Phone Number: " + phone + "\n"  + "Table / Address: " + address; // import vrable //
+                    var phoneNumber = '+96176016281'; //input number whatsapp that send data var phone Number //
+                    var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(data); // var url link whatsapp and phone Number text massge and {encdoeurlcomponent this code send data on whatsapp}
+                    window.open(url, '_blank'); // this open new web when click buy open whatsaap// {Thankx you doctor  Nada massri }
+                    
+                }
+            });
+        }
+    </script>
+</body>
+</html>
